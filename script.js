@@ -10,6 +10,9 @@ function setDate() {
 	} else { secondHand.style.transition = 'all 0.05s';};
 	const minutes = now.getMinutes();
 	const minutesDegrees = ((minutes / 60) * 360) + 90;
+	if (minutesDegrees >= 444) {
+		minHand.style.transition = 'all 0s';
+	} else { minHand.style.transition = 'all 0.05s';};
 	const hours = now.getHours();
 	const hoursDegrees = ((hours / 12) * 360) + 90;
 	secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
