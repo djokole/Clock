@@ -5,9 +5,9 @@ function setDate() {
 	const now = new Date();
 	const seconds = now.getSeconds();
 	const secondsDegrees = ((seconds / 60) * 360) + 90;
-	if (secondsDegrees == 450) {
+	if (secondsDegrees >= 444) {
 		secondHand.style.transition = 'all 0s';
-	} else {};
+	} else { secondHand.style.transition = 'all 0.05s';};
 	const minutes = now.getMinutes();
 	const minutesDegrees = ((minutes / 60) * 360) + 90;
 	const hours = now.getHours();
